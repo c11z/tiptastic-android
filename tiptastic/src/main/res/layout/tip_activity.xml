@@ -1,0 +1,68 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etBill"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="@string/bill_hint"
+        android:gravity="center"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ten_percent"
+        android:id="@+id/btTen"
+        android:layout_alignTop="@+id/btFifteen"
+        android:layout_alignLeft="@+id/etBill"
+        android:onClick="solveTipTen"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fifteen_percent"
+        android:layout_below="@+id/etBill"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btFifteen"
+        android:layout_centerHorizontal="true"
+        android:onClick="solveTipFifteen"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twenty_percent"
+        android:id="@+id/btTwenty"
+        android:layout_alignTop="@+id/btFifteen"
+        android:layout_alignRight="@+id/etBill"
+        android:onClick="solveTipTwenty"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/default_tip"
+        android:id="@+id/tvTip"
+        android:layout_below="@+id/btFifteen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tip_label"
+        android:id="@+id/tvTipLabel"
+        android:layout_alignTop="@+id/tvTip"
+        android:layout_marginLeft="50dp" />
+
+</RelativeLayout>

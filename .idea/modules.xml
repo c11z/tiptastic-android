@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tiptastic/tiptastic.iml" filepath="$PROJECT_DIR$/tiptastic/tiptastic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tiptasticProject.iml" filepath="$PROJECT_DIR$/tiptasticProject.iml" />
+    </modules>
+  </component>
+</project>
+
