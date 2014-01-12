@@ -34,22 +34,12 @@ public class TipActivity extends ActionBarActivity {
         Log.d("DEBUG", "onPause was just called!");
     }
 
-    public void solveTipTen(View v) {
-        String tip = calcTip(new BigDecimal("0.10"));
-        tvTip.setText(tip);
-    }
+    public void solveTip(View v) {
+        BigDecimal percentage = new BigDecimal("0.00");
+        if(v.getTag().equals("ten")) percentage = new BigDecimal("0.10");
+        if(v.getTag().equals("fifteen")) percentage = new BigDecimal("0.15");
+        if(v.getTag().equals("twenty")) percentage = new BigDecimal("0.20");
 
-    public void solveTipFifteen(View v) {
-        String tip = calcTip(new BigDecimal("0.15"));
-        tvTip.setText(tip);
-    }
-
-    public void solveTipTwenty(View v) {
-        String tip = calcTip(new BigDecimal("0.20"));
-        tvTip.setText(tip);
-    }
-
-    private String calcTip(BigDecimal percentage) {
         BigDecimal bill;
         try {
             bill =  new BigDecimal(etBill.getText().toString());
@@ -58,7 +48,7 @@ public class TipActivity extends ActionBarActivity {
             Toast.makeText(this, "You need to input your bill", Toast.LENGTH_SHORT).show();
         }
         BigDecimal tip = bill.multiply(percentage);
-        return "$" + tip.setScale(2, RoundingMode.CEILING).toString();
+        tvTip.setText("$" + tip.setScale(2, RoundingMode.CEILING).toString());
     }
 
 }
